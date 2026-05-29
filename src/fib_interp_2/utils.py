@@ -14,7 +14,7 @@ def pad(num: int, reversed: bool=False) -> str:
 
     return num_str
 
-def generate_sample(cfg : dataConfig) -> list:
+def generate_sample(cfg) -> list:
     max = cfg.max_output
 
     d1 = np.random.randint(cfg.min_output, cfg.max_output)
