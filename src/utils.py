@@ -56,9 +56,10 @@ samples_tensor = t.stack(
 
 
 class SumDataset(Dataset):
-    def __init__(self : Dataset, token_dict : dict, samples):
+    def __init__(self : Dataset, token_dict : dict, samples, carry=True):
         self.token_dict = token_dict
         self.samples = samples
+        self.carry = carry
 
     def __getitem__(self, idx):
         return {"tokens": self.samples[idx, :]}
